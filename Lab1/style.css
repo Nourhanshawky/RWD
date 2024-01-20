@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.navbar{
+    background-color: #09c;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    font-size: 20px;
+    color: white;
+
+}
+.flexContent{
+    border: 3px solid #09c;
+    margin:10px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.flexContent .footer , .footer2{
+    background-color: gainsboro;
+    margin: 0;
+     
+}
+.flexContent .content{
+  margin-top: 15px;
+}
+
+.secflexContent{
+    border: 3px solid #09c;
+    margin: 10px 10px;
+    width: 50%;
+    text-align: center;
+
+}
+.bodyContent{
+    display: flex;
+    
+}
+.secflexContent .content{
+    margin: 20px 10px;
+}
+@media (max-width: 920px){
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .bodyContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flexContent{
+        height: 70vh;
+    }  
+}
+/* Task 2 */
+.item{
+  
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+}
+.itemChild{
+    width: 15%;
+    border: 3px solid orange;
+    height: 15%;
+}
+/* Task3 */
+.parent{
+   height: 100vh;
+    display: grid;
+    /* grid-template-columns: repeat(5 , 1fr); */
+    /* grid-auto-rows: auto; */
+
+}
+.parent div {
+margin: 5px;
+color: white;
+text-align: center;
+padding-top: 50px;
+font-size: 20px;
+
+}
+.header ,.ftr{
+    background-color: #09c;
+    grid-column: 1/6;
+
+}
+.sideNv  {
+    background-color: #ffa726;
+    grid-row: 2/6;
+}
+.main{
+    background-color: #81c784;
+    grid-row: 2/6;
+    grid-column: 2/5;
+}
+
+.sBar{
+    background-color: #ffa726;
+    grid-row: 2/6;
+}
+
+@media (max-width: 920px) {
+    .sideNv  {
+        grid-column: 1/6;
+        grid-row: 2/4;
+    }
+    .main{
+        grid-column: 1/6;
+        grid-row: 4/18;
+    }
+    
+    .sBar{
+        grid-column: 1/6;
+        grid-row: 18/20;
+    }
+}
+/* Task 4 */
+.shape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent div{
+background-color: #09c;
+color: white;
+
+}
+.parent{
+    
+    display: grid;
+    grid-template-areas: "ch1 ch2 ch2"
+    "ch1 ch3 ch4"
+    "ch5 ch5 ch4";
+    transform: rotate(45deg);
+    width: 30%;
+
+}
+.child1{
+    grid-area: ch1;
+}
+.child2{
+    grid-area: ch2;
+}
+.child3{
+    grid-area: ch3;
+}
+.child4{
+    grid-area: ch4;
+
+}
+.child5{
+    grid-area: ch5;
+}
+@media screen and (max-width:920px){
+
+    .parent{
+        transform: rotate(130deg);
+    }
+    .parent div{
+        background-color: #ffa726;
+    }
+}
